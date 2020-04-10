@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/Super-Card-Saver-Front-End/static/css/main.5f361e03.chunk.css",
-    "main.js": "/Super-Card-Saver-Front-End/static/js/main.de027f3c.chunk.js",
-    "main.js.map": "/Super-Card-Saver-Front-End/static/js/main.de027f3c.chunk.js.map",
+    "main.css": "/Super-Card-Saver-Front-End/static/css/main.8749070e.chunk.css",
+    "main.js": "/Super-Card-Saver-Front-End/static/js/main.ea2008e9.chunk.js",
+    "main.js.map": "/Super-Card-Saver-Front-End/static/js/main.ea2008e9.chunk.js.map",
     "runtime-main.js": "/Super-Card-Saver-Front-End/static/js/runtime-main.dd3f5fc5.js",
     "runtime-main.js.map": "/Super-Card-Saver-Front-End/static/js/runtime-main.dd3f5fc5.js.map",
-    "static/css/2.de424728.chunk.css": "/Super-Card-Saver-Front-End/static/css/2.de424728.chunk.css",
-    "static/js/2.d1316da5.chunk.js": "/Super-Card-Saver-Front-End/static/js/2.d1316da5.chunk.js",
-    "static/js/2.d1316da5.chunk.js.map": "/Super-Card-Saver-Front-End/static/js/2.d1316da5.chunk.js.map",
+    "static/css/2.69580acf.chunk.css": "/Super-Card-Saver-Front-End/static/css/2.69580acf.chunk.css",
+    "static/js/2.6d889187.chunk.js": "/Super-Card-Saver-Front-End/static/js/2.6d889187.chunk.js",
+    "static/js/2.6d889187.chunk.js.map": "/Super-Card-Saver-Front-End/static/js/2.6d889187.chunk.js.map",
     "index.html": "/Super-Card-Saver-Front-End/index.html",
-    "precache-manifest.2e0138069b18538455ba20cfbffd6db8.js": "/Super-Card-Saver-Front-End/precache-manifest.2e0138069b18538455ba20cfbffd6db8.js",
+    "precache-manifest.581982f032603bda5a9fab64bea40b06.js": "/Super-Card-Saver-Front-End/precache-manifest.581982f032603bda5a9fab64bea40b06.js",
     "service-worker.js": "/Super-Card-Saver-Front-End/service-worker.js",
-    "static/css/2.de424728.chunk.css.map": "/Super-Card-Saver-Front-End/static/css/2.de424728.chunk.css.map",
-    "static/css/main.5f361e03.chunk.css.map": "/Super-Card-Saver-Front-End/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.d1316da5.chunk.js.LICENSE.txt": "/Super-Card-Saver-Front-End/static/js/2.d1316da5.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/Super-Card-Saver-Front-End/static/media/logo.5d5d9eef.svg"
+    "static/css/2.69580acf.chunk.css.map": "/Super-Card-Saver-Front-End/static/css/2.69580acf.chunk.css.map",
+    "static/css/main.8749070e.chunk.css.map": "/Super-Card-Saver-Front-End/static/css/main.8749070e.chunk.css.map",
+    "static/js/2.6d889187.chunk.js.LICENSE.txt": "/Super-Card-Saver-Front-End/static/js/2.6d889187.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dd3f5fc5.js",
-    "static/css/2.de424728.chunk.css",
-    "static/js/2.d1316da5.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.de027f3c.chunk.js"
+    "static/css/2.69580acf.chunk.css",
+    "static/js/2.6d889187.chunk.js",
+    "static/css/main.8749070e.chunk.css",
+    "static/js/main.ea2008e9.chunk.js"
   ]
 }
