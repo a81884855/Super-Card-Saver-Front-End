@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c23295667aad7fd342c98acb7eb436e3",
+    "revision": "19d7ba8f6e0d5406eaa8af3ffd8c429c",
     "url": "/Super-Card-Saver-Front-End/index.html"
   },
   {

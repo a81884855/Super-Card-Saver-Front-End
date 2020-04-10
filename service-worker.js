@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Super-Card-Saver-Front-End/precache-manifest.fc3b193ed974f3faa50466a5ea61b447.js"
+  "/Super-Card-Saver-Front-End/precache-manifest.e34764a336e6fa0b4dad321d9d7f4cee.js"
 );
 
 self.addEventListener('message', (event) => {
