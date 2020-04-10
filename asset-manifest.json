@@ -1,23 +1,26 @@
 {
   "files": {
     "main.css": "/Super-Card-Saver-Front-End/static/css/main.5f361e03.chunk.css",
-    "main.js": "/Super-Card-Saver-Front-End/static/js/main.61b7b41a.chunk.js",
-    "main.js.map": "/Super-Card-Saver-Front-End/static/js/main.61b7b41a.chunk.js.map",
+    "main.js": "/Super-Card-Saver-Front-End/static/js/main.de027f3c.chunk.js",
+    "main.js.map": "/Super-Card-Saver-Front-End/static/js/main.de027f3c.chunk.js.map",
     "runtime-main.js": "/Super-Card-Saver-Front-End/static/js/runtime-main.dd3f5fc5.js",
     "runtime-main.js.map": "/Super-Card-Saver-Front-End/static/js/runtime-main.dd3f5fc5.js.map",
-    "static/js/2.e5710f51.chunk.js": "/Super-Card-Saver-Front-End/static/js/2.e5710f51.chunk.js",
-    "static/js/2.e5710f51.chunk.js.map": "/Super-Card-Saver-Front-End/static/js/2.e5710f51.chunk.js.map",
+    "static/css/2.de424728.chunk.css": "/Super-Card-Saver-Front-End/static/css/2.de424728.chunk.css",
+    "static/js/2.d1316da5.chunk.js": "/Super-Card-Saver-Front-End/static/js/2.d1316da5.chunk.js",
+    "static/js/2.d1316da5.chunk.js.map": "/Super-Card-Saver-Front-End/static/js/2.d1316da5.chunk.js.map",
     "index.html": "/Super-Card-Saver-Front-End/index.html",
-    "precache-manifest.e34764a336e6fa0b4dad321d9d7f4cee.js": "/Super-Card-Saver-Front-End/precache-manifest.e34764a336e6fa0b4dad321d9d7f4cee.js",
+    "precache-manifest.2e0138069b18538455ba20cfbffd6db8.js": "/Super-Card-Saver-Front-End/precache-manifest.2e0138069b18538455ba20cfbffd6db8.js",
     "service-worker.js": "/Super-Card-Saver-Front-End/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/Super-Card-Saver-Front-End/static/css/2.de424728.chunk.css.map",
     "static/css/main.5f361e03.chunk.css.map": "/Super-Card-Saver-Front-End/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.e5710f51.chunk.js.LICENSE.txt": "/Super-Card-Saver-Front-End/static/js/2.e5710f51.chunk.js.LICENSE.txt",
+    "static/js/2.d1316da5.chunk.js.LICENSE.txt": "/Super-Card-Saver-Front-End/static/js/2.d1316da5.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/Super-Card-Saver-Front-End/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.dd3f5fc5.js",
-    "static/js/2.e5710f51.chunk.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.d1316da5.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.61b7b41a.chunk.js"
+    "static/js/main.de027f3c.chunk.js"
   ]
 }
