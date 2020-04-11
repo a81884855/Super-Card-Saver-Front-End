@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Container, Image } from 'react-bootstrap';
-import { getCardQuery } from '../../queries/queries.js';
-import { graphql } from 'react-apollo';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import React, { Component } from "react";
+import { Container, Image } from "react-bootstrap";
+import { getCardQuery } from "../../queries/queries.js";
+import { graphql } from "react-apollo";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 export class CardDetail extends Component {
   displayCard() {
@@ -14,49 +14,65 @@ export class CardDetail extends Component {
       return (
         <div>
           <Image
-            src={`/images/${Card.image}`}
+            src={`${
+              process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}`
+            }/images/${Card.image}`}
             style={{
-              border: 'none',
-              background: 'none',
-              padding: 'none',
-              margin: '0 0 10px 0'
+              border: "none",
+              background: "none",
+              padding: "none",
+              margin: "0 0 10px 0",
             }}
           />
           <h2>All Rewards: </h2>
           <ul>
             <li>
-              Gas: {Card.gas}%{Card.gasAdditional ? ' (' + Card.gasAdditional + ')' : null}
+              Gas: {Card.gas}%
+              {Card.gasAdditional ? " (" + Card.gasAdditional + ")" : null}
             </li>
             <li>
               Restaurant: {Card.restaurant}%
-              {Card.restaurantAdditional ? ' (' + Card.restaurantAdditional + ')' : null}
+              {Card.restaurantAdditional
+                ? " (" + Card.restaurantAdditional + ")"
+                : null}
             </li>
             <li>
               Grocery: {Card.grocery}%
-              {Card.groceryAdditional ? ' (' + Card.groceryAdditional + ')' : null}
+              {Card.groceryAdditional
+                ? " (" + Card.groceryAdditional + ")"
+                : null}
             </li>
             <li>
               Online Shopping: {Card.online}%
-              {Card.onlineAdditional ? ' (' + Card.onlineAdditional + ')' : null}
+              {Card.onlineAdditional
+                ? " (" + Card.onlineAdditional + ")"
+                : null}
             </li>
             <li>
               Travel: {Card.travel}%
-              {Card.travelAdditional ? ' (' + Card.travelAdditional + ')' : null}
+              {Card.travelAdditional
+                ? " (" + Card.travelAdditional + ")"
+                : null}
             </li>
             <li>
               Furnitures: {Card.furnitures}%
-              {Card.furnituresAdditional ? ' (' + Card.furnituresAdditional + ')' : null}
+              {Card.furnituresAdditional
+                ? " (" + Card.furnituresAdditional + ")"
+                : null}
             </li>
             <li>
               Utilities: {Card.utilities}%
-              {Card.utilitiesAdditional ? ' (' + Card.utilitiesAdditional + ')' : null}
+              {Card.utilitiesAdditional
+                ? " (" + Card.utilitiesAdditional + ")"
+                : null}
             </li>
             <li>
-              Phone: {Card.phone}%{Card.phoneAdditional ? ' (' + Card.phoneAdditional + ')' : null}
+              Phone: {Card.phone}%
+              {Card.phoneAdditional ? " (" + Card.phoneAdditional + ")" : null}
             </li>
           </ul>
           <h3>Card Detail: </h3>
-          {Card.desc.split('\n').map(p => (
+          {Card.desc.split("\n").map((p) => (
             <p key={p}>{p}</p>
           ))}
           <h3>Annual Fee: </h3>
@@ -76,12 +92,12 @@ export class CardDetail extends Component {
 }
 
 export default graphql(getCardQuery, {
-  options: props => {
+  options: (props) => {
     return {
       variables: {
         // name: props.match.params.name
-        name: props.name
-      }
+        name: props.name,
+      },
     };
-  }
+  },
 })(CardDetail);

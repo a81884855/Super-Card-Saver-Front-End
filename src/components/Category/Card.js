@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Image, Modal, Button } from 'react-bootstrap';
-import 'animate.css/animate.min.css';
-import CardDetail from './CardDetail';
+import React, { useState } from "react";
+import { Image, Modal, Button } from "react-bootstrap";
+import "animate.css/animate.min.css";
+import CardDetail from "./CardDetail";
+import { Link } from "react-router-dom";
 
 export default function Card(props) {
   const [hovered, setHovered] = useState(false);
@@ -31,31 +32,40 @@ export default function Card(props) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" href={card.website}>
+          <Button variant="primary" as={Link} to={card.website}>
             Learn More
           </Button>
         </Modal.Footer>
       </Modal>
       <li
-        className={hovered ? 'pulse animated ' : ''}
-        style={{ marginBottom: '18px', cursor: 'pointer' }}
+        className={hovered ? "pulse animated " : ""}
+        style={{ marginBottom: "18px", cursor: "pointer" }}
         onMouseEnter={toggleHover}
         onMouseLeave={toggleHover}
       >
         <div onClick={handleShow}>
           <p style={{ margin: 0 }}>
             {card.name} - {card[`${category}`]}%
-            <span style={{ paddingLeft: '5px', color: 'hotpink', fontStyle: 'oblique' }}>
-              {card[`${category}Additional`] && '(' + card[`${category}Additional`] + ')'}
+            <span
+              style={{
+                paddingLeft: "5px",
+                color: "hotpink",
+                fontStyle: "oblique",
+              }}
+            >
+              {card[`${category}Additional`] &&
+                "(" + card[`${category}Additional`] + ")"}
             </span>
           </p>
           <Image
-            src={`/images/${card.image}`}
+            src={`${
+              process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}`
+            }/images/${card.image}`}
             style={{
-              border: 'none',
-              background: 'none',
-              padding: 'none',
-              width: '80%'
+              border: "none",
+              background: "none",
+              padding: "none",
+              width: "80%",
             }}
             thumbnail
           />

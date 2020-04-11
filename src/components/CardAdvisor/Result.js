@@ -1,9 +1,9 @@
-import React, { Component, useState } from 'react';
-import { graphql } from 'react-apollo';
-import { getCardsQuery } from '../../queries/queries.js';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { Container, Row, Col, Image, Modal, Button } from 'react-bootstrap';
-import CardDetail from '../Category/CardDetail';
+import React, { Component, useState } from "react";
+import { graphql } from "react-apollo";
+import { getCardsQuery } from "../../queries/queries.js";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { Container, Row, Col, Image, Modal, Button } from "react-bootstrap";
+import CardDetail from "../Category/CardDetail";
 
 export class Result extends Component {
   constructor(props) {
@@ -15,22 +15,28 @@ export class Result extends Component {
   compare(cards) {
     const { selected } = this.props;
     const categories = Array.from(selected);
-    cards.forEach(card => {
+    cards.forEach((card) => {
       categories.forEach((category, index) => {
         let total_reward = card[category] * 12 * this.props[index][category];
-        let overLimit = this.props[index][category] * 12 > card[`${category}Limit`];
+        let overLimit =
+          this.props[index][category] * 12 > card[`${category}Limit`];
         if (overLimit)
           total_reward -=
-            ((card[category] - 1) / 100) * 12 * (total_reward - card[`${category}Limit`]);
+            ((card[category] - 1) / 100) *
+            12 *
+            (total_reward - card[`${category}Limit`]);
         total_reward = total_reward / 100 - card.annual;
         if (!this.state[category] || total_reward > this.state[category] || 0) {
-          this.setState({ [category]: total_reward, [`${category}Card`]: card });
+          this.setState({
+            [category]: total_reward,
+            [`${category}Card`]: card,
+          });
         }
       });
     });
   }
 
-  displayResult = props => {
+  displayResult = (props) => {
     const { data, selected } = props;
     const categories = Array.from(selected);
     if (data.loading) {
@@ -98,25 +104,38 @@ export function Card({ card, category, info, reward }) {
             xs={10}
             lg={4}
             key={card.id}
-            style={{ margin: '10px auto 30px' }}
+            style={{ margin: "10px auto 30px" }}
             onClick={() =>
               reward >=
-              (info[category] * info[`${category}Reward`] * 12) / 100 - info[`${category}Annual`]
+              (info[category] * info[`${category}Reward`] * 12) / 100 -
+                info[`${category}Annual`]
                 ? setShow(true)
                 : null
             }
           >
-            <h3 style={{ textTransform: 'capitalize', textAlign: 'center' }}>{category} Card</h3>
+            <h3 style={{ textTransform: "capitalize", textAlign: "center" }}>
+              {category} Card
+            </h3>
             <Image
-              src={`/images/${card.image}`}
+              src={`${
+                process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}`
+              }/images/${card.image}`}
               style={{
-                width: '100%',
-                border: 'none'
+                width: "100%",
+                border: "none",
               }}
               thumbnail
             />
-            <p style={{ textAlign: 'center', fontSize: '1.3rem', color: 'tomato' }}>{card.name} </p>
-            <Container style={{ textAlign: 'center' }}>
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "1.3rem",
+                color: "tomato",
+              }}
+            >
+              {card.name}{" "}
+            </p>
+            <Container style={{ textAlign: "center" }}>
               <Row style={{ fontWeight: 700 }}>
                 <Col xs={3}>Yours</Col>
                 <Col style={{ padding: 0 }} xs={{ span: 3, offset: 6 }}>
@@ -141,16 +160,22 @@ export function Card({ card, category, info, reward }) {
                   {reward <=
                     (info[category] * info[`${category}Reward`] * 12) / 100 -
                       info[`${category}Annual`] && (
-                    <Image src="/win.png" style={{ width: 38, marginLeft: 3 }} />
+                    <Image
+                      src="/win.png"
+                      style={{ width: 38, marginLeft: 3 }}
+                    />
                   )}
                 </Col>
                 <Col xs={6}>Annual Saving</Col>
                 <Col xs={3}>
-                  ${Math.round(reward)}{' '}
+                  ${Math.round(reward)}{" "}
                   {reward >=
                     (info[category] * info[`${category}Reward`] * 12) / 100 -
                       info[`${category}Annual`] && (
-                    <Image src="/win.png" style={{ width: 38, marginLeft: 3 }} />
+                    <Image
+                      src="/win.png"
+                      style={{ width: 38, marginLeft: 3 }}
+                    />
                   )}
                 </Col>
               </Row>

@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import { Row, Col, Container, Form, Button } from 'react-bootstrap';
-import { graphql } from 'react-apollo';
-import { addCommentMutation } from '../queries/queries';
+import React, { Component } from "react";
+import { Row, Col, Container, Form, Button } from "react-bootstrap";
+import { graphql } from "react-apollo";
+import { addCommentMutation } from "../queries/queries";
 
 export class FooterPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       validated: false,
-      title: 'general',
-      content: '',
-      commentSent: false
+      title: "general",
+      content: "",
+      commentSent: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.setState({ validated: true });
     const { title, content } = this.state;
@@ -27,8 +27,8 @@ export class FooterPage extends Component {
         .addCommentMutation({
           variables: {
             title,
-            content
-          }
+            content,
+          },
         })
         .then(() => this.setState({ commentSent: true }));
     }
@@ -42,20 +42,26 @@ export class FooterPage extends Component {
             height: 350,
             // marginTop: 50,
             padding: 38,
-            background: '#4B515D',
-            color: '#ffffff'
+            background: "#4B515D",
+            color: "#ffffff",
           }}
         >
           <Container>
             <Row className="justify-content-md-center">
               {!commentSent ? (
                 <Col md={5} sm={11}>
-                  <Form noValidate validated={validated} onSubmit={this.handleSubmit}>
+                  <Form
+                    noValidate
+                    validated={validated}
+                    onSubmit={this.handleSubmit}
+                  >
                     <Form.Group controlId="title">
                       <Form.Label>Comment</Form.Label>
                       <Form.Control
                         as="select"
-                        onChange={e => this.setState({ title: e.target.value })}
+                        onChange={(e) =>
+                          this.setState({ title: e.target.value })
+                        }
                       >
                         <option>General</option>
                         <option>Wrong Card Info</option>
@@ -70,7 +76,9 @@ export class FooterPage extends Component {
                         rows="3"
                         placeholder="Anything you want to tell me?"
                         value={content}
-                        onChange={e => this.setState({ content: e.target.value })}
+                        onChange={(e) =>
+                          this.setState({ content: e.target.value })
+                        }
                       />
                       <Form.Control.Feedback type="invalid">
                         Please Enter Anything.
@@ -91,17 +99,19 @@ export class FooterPage extends Component {
           style={{
             height: 30,
             padding: 5,
-            textAlign: 'center',
-            background: '#3E4551',
-            color: '#ffffff'
+            textAlign: "center",
+            background: "#3E4551",
+            color: "#ffffff",
           }}
         >
-          &copy; {new Date().getFullYear()} Copyright:{' '}
-          <a href="http://www.supercardsaver.com"> Supercardsaver.com </a>
+          &copy; {new Date().getFullYear()} Copyright:{" "}
+          <a href="/"> Supercardsaver.com </a>
         </div>
       </div>
     );
   }
 }
 
-export default graphql(addCommentMutation, { name: 'addCommentMutation' })(FooterPage);
+export default graphql(addCommentMutation, { name: "addCommentMutation" })(
+  FooterPage
+);

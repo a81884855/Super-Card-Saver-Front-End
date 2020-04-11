@@ -3,16 +3,32 @@ import { Row, Col, Container, Button } from "react-bootstrap";
 import { IoIosCalculator, IoIosCard } from "react-icons/io";
 import { FaWindowRestore, FaLaptopCode } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
+import Background from "../assets/bg.jpg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <div style={{ background: "#333" }}>
       <header className="showcase">
+        <div
+          style={{
+            backgroundImage: `url("${Background}")`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            filter: "blur(8px)",
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+          }}
+        />
+
         <div className="content">
           <div className="title">Find the best Credit Card</div>
           <div className="text">Earn on every dollar you spend</div>
           <Button
-            href="/card-advisor"
+            as={Link}
+            to="/card-advisor"
             variant="primary"
             size="lg"
             style={{ marginTop: 30 }}
@@ -29,7 +45,7 @@ export default function Home() {
                 <IoIosCalculator className="icon" />
                 <h3>Calcultor</h3>
                 <p>Find out how much you can earn</p>
-                <Button variant="primary" href="/calculator">
+                <Button variant="primary" as={Link} to="/calculator">
                   Learn More
                 </Button>
               </ScrollAnimation>
@@ -43,7 +59,7 @@ export default function Home() {
                 <IoIosCard className="icon" />
                 <h3>Best Card</h3>
                 <p>Highest reward on different categories</p>
-                <Button variant="primary" href="/category">
+                <Button variant="primary" as={Link} to="/category">
                   Learn More
                 </Button>
               </ScrollAnimation>
@@ -57,7 +73,7 @@ export default function Home() {
                 <FaWindowRestore className="icon" />
                 <h3>Card Advisor</h3>
                 <p>Best card based on your spending</p>
-                <Button variant="primary" href="/card-advisor">
+                <Button variant="primary" as={Link} to="/card-advisor">
                   Learn More
                 </Button>
               </ScrollAnimation>
