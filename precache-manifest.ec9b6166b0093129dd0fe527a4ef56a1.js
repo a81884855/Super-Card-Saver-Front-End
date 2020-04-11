@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba0fa097f501973b28df965a6763db59",
+    "revision": "4a572de701a47113f00c003c37b9b284",
     "url": "/Super-Card-Saver-Front-End/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Super-Card-Saver-Front-End/static/css/2.69580acf.chunk.css"
   },
   {
-    "revision": "4f13ade4c630a0959022",
+    "revision": "af056611c3227c209d2e",
     "url": "/Super-Card-Saver-Front-End/static/css/main.94261037.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Super-Card-Saver-Front-End/static/js/2.045f484c.chunk.js"
   },
   {
-    "revision": "4f13ade4c630a0959022",
-    "url": "/Super-Card-Saver-Front-End/static/js/main.947bc6c6.chunk.js"
+    "revision": "af056611c3227c209d2e",
+    "url": "/Super-Card-Saver-Front-End/static/js/main.902f9893.chunk.js"
   },
   {
     "revision": "6526e2d5b0f77acaf695",
