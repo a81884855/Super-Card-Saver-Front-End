@@ -1,16 +1,14 @@
 import React from "react";
 import { Navbar, Nav, Container, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import icon from "../assets/apple-touch-icon.png";
 
 export default function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="/">
-          <Image
-            src="/apple-touch-icon.png"
-            style={{ width: "30px", margin: "-5px 5px" }}
-          />
+          <Image src={icon} style={{ width: "30px", margin: "-1rem 0.4rem" }} />
           Super Card Saver
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
