@@ -161,7 +161,7 @@ export function Card({ card, category, info, reward }) {
                     (info[category] * info[`${category}Reward`] * 12) / 100 -
                       info[`${category}Annual`] && (
                     <Image
-                      src="/win.png"
+                      src={`${process.env.PUBLIC_URL}/win.png`}
                       style={{ width: 38, marginLeft: 3 }}
                     />
                   )}
@@ -173,7 +173,7 @@ export function Card({ card, category, info, reward }) {
                     (info[category] * info[`${category}Reward`] * 12) / 100 -
                       info[`${category}Annual`] && (
                     <Image
-                      src="/win.png"
+                      src={`${process.env.PUBLIC_URL}/win.png`}
                       style={{ width: 38, marginLeft: 3 }}
                     />
                   )}
